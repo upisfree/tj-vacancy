@@ -33,11 +33,51 @@
   -moz-osx-font-smoothing: grayscale; 
 }
 
+/* Цитата */
+blockquote
+{
+  margin: 32px 0;
+  font-family: Georgia;
+}
+
+blockquote img
+{
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin-top: 4px;
+  border-radius: 100%;
+}
+
+blockquote author
+{
+  display: block;
+  margin-left: 84px;
+  margin-bottom: -12px;
+  font-size: 24px;
+  font-family: Roboto, sans-serif;
+}
+
+blockquote author b
+{
+  display: block;
+  font-size: 26px;
+}
+
+blockquote p
+{
+  margin-left: 84px;
+  font-size: 19px;
+}
+
+/* Тело */
 body
 {
   margin: 0;
   padding: 0;
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
+  background: #eee;
 }
 
 /* Навигация */
@@ -114,17 +154,8 @@ body
 }
 */
 
-/* Статья */
-.article
-{
-  position: relative;
-  width: 960px;
-  margin: 0 auto 0 auto;
-  word-wrap: break-word;
-  z-index: 5;
-}
-
-.article .cover.container
+/* Обложка */
+.cover
 {
   width: 100%;
   height: 544px;
@@ -136,7 +167,7 @@ body
 }
 
 /* Затемнение картинки */
-.article .cover.container::after /* не фильтрами потому что IE до сих пор их не поддерживает (http://caniuse.com/#feat=css-filters) */
+.cover::after /* не фильтрами потому что IE до сих пор их не поддерживает (http://caniuse.com/#feat=css-filters) */
 {
   content: '';
   position: absolute;
@@ -148,7 +179,7 @@ body
   z-index: 10;
 }
 
-.article .cover.content
+.cover .content
 {
   position: relative;
   top: 40%;
@@ -157,51 +188,51 @@ body
   z-index: 15;
 }
 
-.article .cover.content h2
+.cover .content h2
 {
   font-size: 42px;
   margin-bottom: 16px;
 }
 
-.article .cover.content time,
-.article .cover.content author,
-.article .cover.content .separator,
-.article .cover.content .comments-count,
-.article .cover.content .views-count
+.cover .content time,
+.cover .content author,
+.cover .content .separator,
+.cover .content .comments-count,
+.cover .content .views-count
 {
   color: #fff;
   font-size: 16px;
   font-weight: 300;
 }
 
-.article .cover.content .separator
+.cover .content .separator
 {
   margin: 0 4px 0 4px;
 }
 
-.article .cover.content .comments-count .icon,
-.article .cover.content .views-count .icon
+.cover .content .comments-count .icon,
+.cover .content .views-count .icon
 {
   margin: 0 8px 0 16px;
 }
 
-.article .cover.content .description
+.cover .content .description
 {
   font-size: 18px;
   line-height: 1.4;
 }
 
-.article .cover.share
+.cover .share
 {
   display: table;
-  position: absolute;
+  position: relative;
+  top: 243px;
   width: 448px;
   left: 128px;
-  bottom: 0;
   z-index: 15;
 }
 
-.article .cover.share a
+.cover .share a
 {
   display: table-cell;
   padding: 8px;
@@ -210,22 +241,41 @@ body
   text-decoration: none;
 }
 
-.article .cover.share a .count
+.cover .share a .count
 {
   float: right;
 }
 
-.article .cover.share .share-twitter
+.cover .share .share-twitter
 {
   background: #00b7ec;
 }
 
-.article .cover.share .share-facebook
+.cover .share .share-facebook
 {
   background: #425497;
 }
 
-.article .cover.share .share-vk
+.cover .share .share-vk
 {
   background: #526e8f;
+}
+
+/* Статья */
+.article
+{
+  position: relative;
+  width: 960px;
+  margin: 0 auto 0 auto;
+  word-wrap: break-word;
+  z-index: 5;
+}
+
+.article > .content
+{
+  padding: 32px 128px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #000;
+  background: #fff;
 }
