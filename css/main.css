@@ -33,44 +33,6 @@
   -moz-osx-font-smoothing: grayscale; 
 }
 
-/* Цитата */
-blockquote
-{
-  margin: 32px 0;
-  font-family: Georgia;
-}
-
-blockquote img
-{
-  display: block;
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  margin-top: 4px;
-  border-radius: 100%;
-}
-
-blockquote author
-{
-  display: block;
-  margin-left: 84px;
-  margin-bottom: -12px;
-  font-size: 24px;
-  font-family: Roboto, sans-serif;
-}
-
-blockquote author b
-{
-  display: block;
-  font-size: 26px;
-}
-
-blockquote p
-{
-  margin-left: 84px;
-  font-size: 19px;
-}
-
 /* Тело */
 body
 {
@@ -80,10 +42,15 @@ body
   background: #eee;
 }
 
+.clear
+{
+  clear: both;
+}
+
 /* Навигация */
 .menu
 {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100vw;
   height: 48px;
@@ -278,4 +245,132 @@ body
   line-height: 1.5;
   color: #000;
   background: #fff;
+}
+
+
+/* Цитата */
+blockquote
+{
+  margin: 32px 0;
+  font-family: Georgia, serif;
+}
+
+blockquote img
+{
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin-top: 4px;
+  border-radius: 100%;
+}
+
+blockquote author
+{
+  display: block;
+  margin-left: 84px;
+  margin-bottom: -12px;
+  font-size: 24px;
+  font-family: Roboto, sans-serif;
+}
+
+blockquote author b
+{
+  display: block;
+  font-size: 26px;
+}
+
+blockquote p
+{
+  margin-left: 84px;
+  font-size: 19px;
+}
+
+/* Лучшие материалы */
+.featured
+{
+  width: 90%;
+  margin: 64px auto;
+  padding: 64px 0;
+  text-align: center;
+  border-top: 1px solid #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.featured h3
+{
+  display: inline-block;
+  position: relative;
+  top: -116px;
+  width: 372px;
+  font-weight: 300;
+  font-size: 32px;
+  background: #eee;
+}
+
+.featured button
+{
+  display: inline-block;
+  position: relative;
+  bottom: 116px;
+  width: 372px;
+  padding: 24px 0;
+  outline: 0;
+  border: 2px solid #d3d3d3;
+  border-radius: 100px;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  background: #eee;
+}
+
+.featured button:hover
+{
+  background: #e5e5e5;
+}
+
+.featured button:active
+{
+  color: #fff;
+  background: #000;
+  border-color: #000;
+}
+
+.featured .container
+{
+  position: relative;
+  top: -116px;
+  width: 900px;
+  margin: auto;
+  padding-left: 38px;
+  overflow: hidden; /* чиним высоту */
+}
+
+.featured article
+{
+  float: left;
+  width: 262px;
+  margin: 0 38px 32px 0;
+  text-align: left;
+}
+
+.featured article img
+{
+  width: 262px;
+  height: 152px
+}
+
+.featured article h4
+{
+  margin-top: 12px;
+  margin-bottom: -4px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.featured article p
+{
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.4;
 }
