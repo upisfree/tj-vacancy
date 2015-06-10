@@ -15,7 +15,9 @@ function sendComment()
   $('.comments .comment:last author').text('Василий Анонимусов');
   $('.comments .comment:last time').text('только что');
   $('.comments .comment:last p').text($('.comments .form textarea').val());
-  $('.comments .comment:last .rating').text('0');
+  $('.comments .comment:last .rating').text('0').removeClass('positive, negative');
+
+  $('.comments .form textarea').val('')
 }
 
 $(function() 
@@ -39,4 +41,11 @@ $(function()
   });
 
   $('.comments .form .send').click(sendComment);
+
+  $('.comments .comment .reply').click(function()
+  {
+    var text = $(this).parent().find('author').text();
+
+    $('.comments .form textarea').val($(this).parent().find('author').text() + ', ').focus();
+  });
 });

@@ -510,6 +510,7 @@ blockquote p
 
 .comments .comment .reply:hover
 {
+  cursor: pointer;
   color: #888;
   border-bottom-color: #888;
 }
