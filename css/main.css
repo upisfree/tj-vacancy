@@ -425,6 +425,11 @@ blockquote p
   margin-left: 60px; 
 }
 
+.comments .comment.second-level author
+{
+  font-size: 15px;
+}
+
 .comments .comment img
 {
   display: block;
@@ -433,6 +438,23 @@ blockquote p
   height: 42px;
   margin-top: 4px;
   border-radius: 3px;
+}
+
+.comments .comment .rating
+{
+  margin-top: 8px;
+  float: right;
+  color: #bcbcbc;
+}
+
+.comments .comment .rating.positive
+{
+  color: #26bc1b;
+}
+
+.comments .comment .rating.negative
+{
+  color: #e44040;
 }
 
 .comments .comment .info,
@@ -488,9 +510,4 @@ blockquote p
 {
   color: #000;
   border-bottom-color: #000;
-}
-
-.comments .comment .rating
-{
-  display: none;
 }

@@ -12,4 +12,14 @@ $(function()
     $('.featured .unvisible').animate({opacity: 1}, featuredAnimationTime).removeClass('unvisible');
     $('.featured button').animate({opacity: 0}, featuredAnimationTime).hide(featuredAnimationTime);
   });
+
+  $('.comments .comment .rating').each(function()
+  {
+    var t = $(this);
+
+    if (t.text().search(/[0-9]/) == 1) // +'−10' == NaN, поэтому проверка не значения
+      t.addClass('negative');
+    else if (t.text() > 0)
+      t.addClass('positive');
+  });
 });
