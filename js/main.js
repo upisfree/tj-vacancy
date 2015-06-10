@@ -3,6 +3,21 @@ function random(min, max)
   return Math.floor(Math.random() * (max - min + 1)) + min; 
 }
 
+function sendComment()
+{
+  var lastComment = $('.comments .comment:last');
+
+  $(lastComment).clone().insertAfter(lastComment);
+
+  // это же демка
+  // динамический шаблонизатор, скажем
+  $('.comments .comment:last img').attr('src', './img/avatars/889422_original.jpg');
+  $('.comments .comment:last author').text('Василий Анонимусов');
+  $('.comments .comment:last time').text('только что');
+  $('.comments .comment:last p').text($('.comments .form textarea').val());
+  $('.comments .comment:last .rating').text('0');
+}
+
 $(function() 
 {
   var featuredAnimationTime = 250;
@@ -22,4 +37,6 @@ $(function()
     else if (t.text() > 0)
       t.addClass('positive');
   });
+
+  $('.comments .form .send').click(sendComment);
 });
