@@ -5,11 +5,11 @@ function random(min, max)
 
 $(function() 
 {
-  //$('.featured').height($('.featured').height() - 116);
+  var featuredAnimationTime = 250;
 
   $('.featured button').click(function()
   {
-    $('.featured .unvisible').animate({opacity: 1}, 500).removeClass('unvisible');
-    $('.featured button').animate({opacity: 0}, 500).hide(500);
+    $('.featured .unvisible').animate({opacity: 1}, featuredAnimationTime).removeClass('unvisible');
+    $('.featured button').animate({opacity: 0}, featuredAnimationTime).hide(featuredAnimationTime);
   });
 });
