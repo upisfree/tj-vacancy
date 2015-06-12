@@ -409,7 +409,7 @@ blockquote p
 .comments
 {
   width: 960px;
-  margin: 96px auto;
+  margin: 96px auto 64px auto;
   word-wrap: break-word;
   overflow: hidden;
   background: #fff;
@@ -591,4 +591,69 @@ blockquote p
 .comments .form label:active
 {
   top: 6px;
+}
+
+/* Подвал */
+.bottom
+{
+  margin: 96px auto;
+  width: 960px;
+}
+
+.bottom .title,
+.bottom .links,
+.bottom .social
+{
+  display: inline;
+  color: #000;
+  margin: 0 64px;
+  text-decoration: none;
+}
+
+.bottom .links a
+{
+  margin: 0 32px;
+}
+
+.bottom .links a:first-of-type
+{
+  margin-left: 0;
+}
+
+.bottom .links a:last-of-type
+{
+  margin-right: 0;
+}
+
+.bottom .social a
+{
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  color: #fff;
+}
+
+.bottom .social .twitter
+{
+  background: #31adf4;
+}
+
+.bottom .social .facebook
+{
+  background: #304591;
+}
+
+.bottom .social .vk
+{
+  background: #527397;
+}
+
+.bottom .social .gplus
+{
+  background: #d94435;
+}
+
+.bottom .social .ok
+{
+  background: #f2812e;
 }

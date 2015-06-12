@@ -10,7 +10,7 @@ function sendComment()
   $(lastComment).clone().insertAfter(lastComment);
 
   // это же демка
-  // динамический шаблонизатор, скажем
+  // динамический шаблонизатор, скажем (а так handlebars неплох)
   $('.comments .comment:last img').attr('src', './img/avatars/889422_original.jpg');
   $('.comments .comment:last author').text('Василий Анонимусов');
   $('.comments .comment:last time').text('только что');
