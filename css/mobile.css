@@ -1,0 +1,71 @@
+@media (max-width: 1023px) /* запас, скажем */
+{
+  .menu
+  {
+    width: 100%;
+    height: 48px;
+    background: #fff;
+  }
+
+  .menu .container
+  {
+    display: none;
+  }
+
+  .menu .mobile-container
+  {
+    height: 100%;
+  }
+
+  .menu .mobile-container .icon,
+  .menu .mobile-container .title,
+  .menu .mobile-container .user
+  {
+    display: inline-block;
+  }
+
+  .menu .mobile-container .icon
+  {
+    position: relative;
+    top: 8px;
+    margin-left: 8px;
+    font-size: 28px;
+  }
+
+  .menu .mobile-container .title
+  {
+    position: relative;
+    top: 6px;
+    font-size: 22px;
+  }
+
+  .menu .mobile-container .user
+  {
+    position: relative;
+    right: 16px;
+    float: right;
+  }
+
+  .menu .mobile-container .user img
+  {
+    position: relative;
+    top: 10px;
+    left: 16px;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+  }
+
+  .menu .mobile-container .user .notisfactions
+  {
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    left: 6px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    background: #ff2400;
+  }
+}
