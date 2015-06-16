@@ -64,3 +64,50 @@ button:hover
 {
   cursor: pointer;
 }
+
+.cover
+{
+  width: 100%;
+  height: 544px;
+  color: #fff;
+  background-position: 45% 40%; 
+  background-repeat: no-repeat; 
+  background-image: url('../img/article/B-Ty0pFIYAEUNgU.jpg');
+}
+
+/* Затемнение картинки */
+.cover::after /* не фильтрами потому что IE до сих пор их не поддерживает (http://caniuse.com/#feat=css-filters) */
+{
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.cover .content time,
+.cover .content author,
+.cover .content .separator,
+.cover .content .comments-count,
+.cover .content .views-count
+{
+  font-weight: 300;
+}
+
+.cover .content .separator
+{
+  margin: 0 4px;
+}
+
+.cover .content .comments-count .icon,
+.cover .content .views-count .icon
+{
+  margin: 0 8px 0 16px;
+}
+
+.cover .content .description
+{
+  line-height: 1.4;
+}

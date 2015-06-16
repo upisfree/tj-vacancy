@@ -1,5 +1,6 @@
 @media (max-width: 1023px) /* запас, скажем */
 {
+  /* Навигация */
   .menu
   {
     width: 100%;
@@ -67,5 +68,63 @@
     border: 2px solid #fff;
     border-radius: 100%;
     background: #ff2400;
+  }
+
+  /* Обложка */
+  .cover
+  {
+    position: relative;
+    display: inline-block;
+    height: 480px;
+  }
+
+  .cover .content
+  {
+    position: absolute;
+    bottom: 0;
+    padding: 0 16px;
+    z-index: 15;
+  }
+
+  .cover::after
+  {
+    height: 480px;
+  }
+
+  .cover .content h2
+  {
+    margin-bottom: 8px;
+    font-size: 36px;
+  }
+
+  .cover .content time,
+  .cover .content author,
+  .cover .content .separator,
+  .cover .content .comments-count,
+  .cover .content .views-count
+  {
+    font-size: 15px;
+  }
+
+  .cover .content .separator
+  {
+    margin: 0 2px;
+  }
+
+  .cover .content .comments-count .icon,
+  .cover .content .views-count .icon
+  {
+    margin: 0 8px;
+  }
+
+  .cover .content .description
+  {
+    margin-top: 12px;
+    font-size: 17px;
+  }
+
+  .cover .share
+  {
+    display: none;
   }
 }
