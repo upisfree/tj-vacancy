@@ -70,7 +70,7 @@ button:hover
 {
   position: absolute;
   top: 0;
-  width: 100vw;
+  width: 100%;
   height: 48px;
   text-align: center;
   font-size: 105%;
@@ -78,65 +78,136 @@ button:hover
   box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.25);
   z-index: 10;
 }
-/*
-.menu ul
-{
-  display: inline-block;
-  width: 1000px;
-  margin: 0;
-}
 
-.menu li
+.menu .container
 {
-  display: inline-block;
+  margin: auto;
+  width: 960px;
   height: 48px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: clip;
-  border-right: 1px solid lightgrey;
 }
 
-.menu li a,
-.menu li input
+.menu .container .title,
+.menu .container .sections,
+.menu .container .search,
+.menu .container .user
 {
-  display: block;
+  display: inline-block;
+  float: left;
+  height: 100%;
+  line-height: 2.5;
+}
+
+.menu .container .title
+{
+  width: 160px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 500;
+  border-right: 1px solid #e5e5e5;
+}
+
+.menu .container .sections a
+{
+  display: inline-block;
+  height: 100%;
+  padding: 0 17px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 3;
+}
+
+.menu .container .search
+{
+  width: 192px;
+  color: #d6d6d6;
+  font-size: 16px;
+}
+
+.menu .container .search .icon
+{
+  position: absolute;
+  margin-top: -4px;
+  margin-left: 16px;
+  font-size: 22px;
+}
+
+.menu .container .search input
+{
   width: 100%;
   height: 100%;
+  padding-left: 52px;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: Roboto, sans-serif;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
-.menu li a
+.menu .container .title,
+.menu .container .sections a,
+.menu .container .search
 {
-  *line-height: 24px;
+  border-right: 1px solid #e5e5e5;
 }
 
-.menu .user
+.menu .container .user
 {
-  box-shadow: inset -15px 0 15px -15px #333;
+  width: 180px;
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
 }
 
-.menu .user img
+.menu .container .user::after /* градиент */
 {
-  float: left;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  top: 0;
+  margin-left: 170px;
+  
+  /* префиксов нет, потому что поддержка хороша (http://caniuse.com/#feat=css-repeating-gradients) */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1);
+}
+
+.menu .container .user img
+{
   position: relative;
-  top: -2px;
+  float: left;
+  top: 10px;
+  left: 16px;
   width: 28px;
   height: 28px;
   border-radius: 100%;
 }
 
-.menu .notisfactions
+.menu .container .user .notisfactions
 {
   position: relative;
   display: inline-block;
-  width: 12px;
-  height: 12px;
-  top: 3px;
-  left: -6px;
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: 8px;
   border: 2px solid #fff;
   border-radius: 100%;
   background: #ff2400;
 }
-*/
+
+.menu .container .user span
+{
+  position: relative;
+  top: 3px;
+  left: 12px;
+  font-size: 14px;
+  font-weight: 300;
+}
 
 /* Обложка */
 .cover
@@ -597,7 +668,7 @@ blockquote p
 /* Подвал */
 .bottom
 {
-  margin: 0 auto 96px auto;
+  margin: -16px auto 64px auto;;
   width: 960px;
 }
 
