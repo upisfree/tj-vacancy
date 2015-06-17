@@ -127,4 +127,65 @@
   {
     display: none;
   }
+
+  /* Статья */
+  .article > .content
+  {
+    margin-top: -4px;
+    padding: 0 16px;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #000;
+  }
+
+  .article > .content blockquote
+  {
+    position: relative;
+    width: calc(100% + 32px);
+    left: -16px;
+    margin: 16px 0;
+    padding: 16px;
+    padding-bottom: 4px;
+    font-family: Georgia, serif;
+    background: #f6f6f6;
+  }
+
+  .article > .content blockquote img,
+  .article > .content blockquote author,
+  .article > .content blockquote author b
+  {
+    display: block;
+    text-align: center;
+  }
+
+  .article > .content blockquote img
+  {
+    position: relative;
+    margin: 16px auto;
+    right: 20px;
+    width: 96px;
+    height: 96px;
+    border-radius: 100%;
+  }
+
+  .article > .content blockquote author
+  {
+    width: calc(100% - 32px);
+    font-size: 18px;
+    font-weight: 300;
+    font-family: Roboto, sans-serif;
+    line-height: 1.4;
+  }
+
+  .article > .content blockquote author b
+  {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .article > .content blockquote p
+  {
+    width: calc(100% - 32px);
+    font-size: 19px;
+  }
 }
