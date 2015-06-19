@@ -229,7 +229,7 @@
   {
     width: calc(100% * 1.25);
     margin-left: calc(-100% / 7.5);
-    opacity: 0;
+    color: transparent; /* скрываем текст у неактивных слайдов */
   }
 
   .featured .container h4
@@ -257,12 +257,12 @@
     border-radius: 100%;
   }
 
-   /* скрываем текст у неактивных слайдов */
+   /* показываем текст у неактивных слайдов */
   .swiper-slide-active h4,
   .swiper-slide-active p
   {
-    opacity: 1 !important;
-    transition: opacity .2s ease-out; /* впервые использую без префиксов, уи-и! (http://caniuse.com/#feat=css-transitions) */
+    color: #fff !important;
+    transition: color .2s ease-out; /* впервые использую без префиксов, уи-и! (http://caniuse.com/#feat=css-transitions) */
   }
 
   .swiper-pagination
