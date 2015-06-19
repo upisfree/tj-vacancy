@@ -280,6 +280,11 @@
     font-size: 19px;
   }
 
+  blockquote .share
+  {
+    display: none;
+  }
+
   /* Лучшие материалы */
   .featured
   {

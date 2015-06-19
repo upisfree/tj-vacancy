@@ -84,4 +84,9 @@ $(function()
 
     $('.comments .form textarea').val($(this).parent().find('author').text() + ', ').focus();
   });
+
+  $('blockquote .share .share-button').click(function()
+  {
+    $('blockquote .share a:not(.share-button)').animate({ width: 'toggle' }, 0);
+  });
 });

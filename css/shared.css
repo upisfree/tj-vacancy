@@ -229,22 +229,26 @@ button:hover
 }
 
 /* Подвал */
-.bottom .social a .icon
+.bottom .social a .icon,
+blockquote .share a .icon
 {
   margin-right: 0;
 }
 
-.bottom .social .twitter
+.bottom .social .twitter,
+blockquote .share .twitter
 {
   background: #31adf4;
 }
 
-.bottom .social .facebook
+.bottom .social .facebook,
+blockquote .share .facebook
 {
   background: #304591;
 }
 
-.bottom .social .vk
+.bottom .social .vk,
+blockquote .share .vk
 {
   background: #527397;
 }
