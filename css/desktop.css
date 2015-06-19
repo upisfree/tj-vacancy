@@ -544,34 +544,4 @@
   {
     top: 2px;
   }
-
-  .bottom .social a .icon
-  {
-    margin-right: 0;
-  }
-
-  .bottom .social .twitter
-  {
-    background: #31adf4;
-  }
-
-  .bottom .social .facebook
-  {
-    background: #304591;
-  }
-
-  .bottom .social .vk
-  {
-    background: #527397;
-  }
-
-  .bottom .social .gplus
-  {
-    background: #d94435;
-  }
-
-  .bottom .social .ok
-  {
-    background: #f2812e;
-  }
 }
