@@ -293,7 +293,6 @@
   .comments .container
   {
     display: inline-block;
-    margin-top: -8px;
     padding: 0px 16px;
   }
 
@@ -321,15 +320,13 @@
 
   .comments .comment .rating
   {
-    margin-top: -22px;
+    margin-top: -20px;
     font-size: 17px;
   }
 
   .comments .comment .info,
   .comments .comment p,
-  .comments .comment .reply,
-  .comments .form textarea,
-  .comments .form .send
+  .comments .comment .reply
   {
     margin-left: 52px;
   }
@@ -350,5 +347,38 @@
   .comments .comment .reply-to
   {
     margin-left: 32px;
+  }
+
+  /* Форма написания комментариев */
+  .comments .form
+  {
+    width: calc(100% + 32px);
+    margin-top: 28px;
+    margin-left: -16px;
+    padding: 16px;
+    padding-top: 0;
+    border-top: 1px solid #ebebeb;
+  }
+
+  .comments .form textarea
+  {
+    width: calc(100% - 48px); /* убрал отступ слева + внутренний отступ */
+    height: 96px;
+    padding: 8px;
+    border: 1px solid #d8d8d8;
+    border-radius: 2px;
+    outline: none;
+    resize: none;
+  }
+
+  .comments .form .mobile-caption
+  {
+    color: #999;
+    font-weight: 700;
+  }
+
+  .comments .form img
+  {
+    display: none;
   }
 }

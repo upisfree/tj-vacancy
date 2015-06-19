@@ -464,9 +464,6 @@
   .comments .comment .reply-to
   {
     margin-left: 40px;
-    margin-bottom: 4px;
-    font-size: 14px;
-    color: #bcbcbc;
   }
 
   /* Форма написания комментариев */
@@ -482,55 +479,9 @@
     resize: none;
   }
 
-  .comments .form .send
-  {
-    position: relative;
-    margin-top: 12px;
-    width: 100px;
-    padding: 8px 0;
-    border: none;
-    outline: 0;
-    border-radius: 2px;
-    font-family: Roboto, sans-serif;
-    color: #fff;
-    background: #13b04b;
-  }
-
-  .comments .form .send:hover
-  {
-    background: #0d963e;
-  }
-
-  .comments .form .send:active
-  {
-    top: 2px;
-    color: #fff;
-    background: #000;
-  }
-
-  .comments .form input
+  .comments .form .mobile-caption
   {
     display: none;
-  }
-
-  .comments .form label
-  {
-    position: relative;
-    top: 4px;
-    margin-left: 24px;
-    color: #bbb;
-    font-size: 18px;
-  }
-
-  .comments .form label:hover
-  {
-    cursor: pointer;
-    color: #000;
-  }
-
-  .comments .form label:active
-  {
-    top: 6px;
   }
 
   /* Подвал */
