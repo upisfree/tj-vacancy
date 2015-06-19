@@ -1,5 +1,10 @@
 @media (max-width: 1023px) /* запас, скажем */
 {
+  body
+  {
+    overflow-x: hidden;
+  }
+
   /* Навигация */
   .menu
   {
@@ -76,6 +81,7 @@
     position: relative;
     display: inline-block;
     height: 480px;
+    background-position: 45% 40%;
   }
 
   .cover .content
@@ -187,5 +193,94 @@
   {
     width: calc(100% - 32px);
     font-size: 19px;
+  }
+
+  /* Лучшие материалы */
+  .featured
+  {
+    margin-top: -16px;
+    text-align: center;
+    background: #333;
+  }
+
+  .featured h3
+  {
+    display: inline-block;
+    margin: 24px 0;
+    width: 100%;
+    font-size: 22px;
+    font-weight: 300;
+    color: #858585;
+  }
+
+  .featured .clear,
+  .featured .button-container
+  {
+    display: none;
+  }
+
+  .featured .container a
+  {
+    color: #fff;
+  }
+
+  .featured .container h4,
+  .featured .container p
+  {
+    width: calc(100% * 1.25);
+    margin-left: calc(-100% / 7.5);
+    opacity: 0;
+  }
+
+  .featured .container h4
+  {
+    margin-top: 16px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .featured .container p
+  {
+    display: inline-block;
+    margin-top: -16px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  .featured .img
+  {
+    display: inline-block;
+    width: 128px;
+    height: 128px;
+    background-size: cover;
+    background-position: 50%;
+    border-radius: 100%;
+  }
+
+   /* скрываем текст у неактивных слайдов */
+  .swiper-slide-active h4,
+  .swiper-slide-active p
+  {
+    opacity: 1 !important;
+    transition: opacity .2s ease-out; /* впервые использую без префиксов, уи-и! (http://caniuse.com/#feat=css-transitions) */
+  }
+
+  .swiper-pagination
+  {
+    position: relative;
+    bottom: 24px !important;
+    margin: 36px 0;
+  }
+
+  .swiper-pagination-bullet
+  {
+    width: 10px;
+    height: 10px;
+    background: #5c5c5c;
+  }
+
+  .swiper-pagination-bullet-active
+  {
+    background: #adadad;
   }
 }

@@ -30,12 +30,11 @@
 
     <link href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,700italic,300,700,500italic,300italic,400&subset=cyrillic,latin" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/lib/swiper.min.css">
+
+    <link rel="stylesheet" href="./css/shared.css">
     <link rel="stylesheet" href="./css/desktop.css">
     <link rel="stylesheet" href="./css/mobile.css">
-
-    <script src="./js/lib/jquery-2.1.4.min.js"></script>
-    <script src="./js/main.js"></script>
   </head>
 
   <body>
@@ -74,7 +73,7 @@
     </nav>
 
     <section class="article">
-      <div class="cover">
+      <div class="cover" style="background-image: url('./img/article/B-Ty0pFIYAEUNgU.jpg');">
         <div class="content">
           <h2>В России наша миссия выполнена</h2>
           <time>13 апр 2015</time>
@@ -183,7 +182,7 @@
 
       <div class="container">
         <a href="#">
-          <img src="./img/featured/254fe67256d8-normal.jpg">
+          <div class="img" style="background-image: url('./img/featured/254fe67256d8-normal.jpg');"></div>
           <h4>Флешмоб: День голого садовода</h4>
           <p>
 В первые выходные мая тысячи добровольцев по всему миру поработали в саду обнажёнными, чтобы почувствовать единение с природой
@@ -191,7 +190,7 @@
         </a>
 
         <a href="#">
-          <img src="./img/featured/ad0388d42bed-normal.jpg">
+          <div class="img" style="background-image: url('./img/featured/ad0388d42bed-normal.jpg');"></div>
           <h4>«Он со мной»</h4>
           <p>
 Папарацци попал в VIP-зону «Боя века» и сфотографировался со звёздами, притворившись спутником Ди Каприо 
@@ -199,7 +198,7 @@
         </a>
 
         <a href="#">
-          <img src="./img/featured/6120b68c7aff-normal.jpg">
+          <div class="img" style="background-image: url('./img/featured/6120b68c7aff-normal.jpg');"></div>
           <h4>Фотожабы: Efes и люди</h4>
           <p>
 Рекламщиков бренда пива Efes Pilsener раскритиковали за фотожабы людей с бутылками в руках
@@ -209,7 +208,7 @@
         <div class="clear"></div>
 
         <a href="#" class="unvisible">
-          <img src="./img/featured/66da0ab93a67-normal.jpg">
+          <div class="img" style="background-image: url('./img/featured/66da0ab93a67-normal.jpg');"></div>
           <h4>Пионерский наш отряд</h4>
           <p>
 В Северной Корее расстрелян школьник, создавший СМИ о внутреннем Интернете страны
@@ -217,13 +216,15 @@
         </a>
 
         <a href="#" class="unvisible">
-          <img src="./img/featured/ee860f9ab51e-normal.jpg">
+          <div class="img" style="background-image: url('./img/featured/ee860f9ab51e-normal.jpg');"></div>
           <h4>«А дети какие у них будут?»</h4>
           <p>
 Реакция пользователей сети на новость о женитьбе Харрисона Форда и Питера Мейхью, исполнителя роли Чубаки
           </p>
         </a>
       </div>
+
+      <div class="swiper-pagination"></div>
 
       <div class="button-container">
         <button class="button">Показать ещё</button>        
@@ -375,5 +376,12 @@
         <a href="#" class="ok"><i class="icon"></i></a>
       </div>
     </section>
+
+
+
+    <script src="./js/lib/jquery.min.js"></script>
+    <script src="./js/lib/swiper.jquery.min.js"></script>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>

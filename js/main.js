@@ -1,3 +1,7 @@
+var featuredSwiper,
+    featuredAnimationTime = 250,
+    pagination = $('<div class="swiper-pagination"></div>'); // простите
+
 function random(min, max) 
 {
   return Math.floor(Math.random() * (max - min + 1)) + min; 
@@ -20,9 +24,41 @@ function sendComment()
   $('.comments .form textarea').val('')
 }
 
+function checkSwiper() // другое имя?
+{
+  if (window.innerWidth < 1023)
+  {
+    $('.featured .container').addClass('swiper-wrapper');
+    $('.featured .container a').addClass('swiper-slide');
+
+    featuredSwiper = new Swiper('.featured',
+    {
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: 2,
+      pagination: '.swiper-pagination',
+      paginationClickable: true
+    });
+  }
+  else if (featuredSwiper)
+  {
+    $('.featured .container').removeClass('swiper-wrapper').attr('style', '');
+    $('.featured .container a').removeClass('swiper-slide');
+
+    featuredSwiper.destroy(true, true);
+
+    $('.swiper-pagination').remove();
+    $('.featured').append(pagination);
+
+    $('.swiper-slide-duplicate').remove();
+  }
+}
+
 $(function() 
 {
-  var featuredAnimationTime = 250;
+  checkSwiper();
+
+  $(window).resize(checkSwiper);
 
   $('.featured button').click(function()
   {

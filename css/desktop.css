@@ -155,6 +155,11 @@
   }
 
   /* Обложка */
+  .cover
+  {
+    background-position: 50% 25%;
+  }
+
   .cover::after
   {
     height: 544px;
@@ -353,10 +358,12 @@
     text-align: left;
   }
 
-  .featured a img
+  .featured a .img /* не тегом, т.к. в мобильной версии не нужен background-size: cover, который у <img> */
   {
+    display: inline-block;
     width: 262px;
-    height: 152px
+    height: 152px;
+    background-size: cover;
   }
 
   .featured a h4
@@ -378,6 +385,11 @@
   {
     display: none;
     opacity: 0;
+  }
+
+  .featured .swiper-pagination
+  {
+    display: none;
   }
 
   /* Комментарии */
