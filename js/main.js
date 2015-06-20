@@ -66,9 +66,15 @@ $(function()
     var d = $('.menu .mobile-container .dropdown');
 
     if (d.is(':visible'))
-      $('.menu .mobile-container .dropdown:visible').slideUp(dropdownMenuSpeedAnimation);
+      d.slideUp(dropdownMenuSpeedAnimation);
     else
-      $('.menu .mobile-container .dropdown:hidden').slideDown(dropdownMenuSpeedAnimation);
+      d.slideDown(dropdownMenuSpeedAnimation);
+  });
+
+  $('.article').click(function()
+  {
+    if ($('.menu .mobile-container .dropdown').is(':visible'))
+      $('.menu .mobile-container .dropdown').slideUp(dropdownMenuSpeedAnimation);
   });
 
   $('.featured button').click(function()
