@@ -3,11 +3,6 @@ var featuredSwiper,
     pagination = $('<div class="swiper-pagination"></div>'), // простите
     dropdownMenuSpeedAnimation = 100;
 
-function random(min, max) 
-{
-  return Math.floor(Math.random() * (max - min + 1)) + min; 
-}
-
 function sendComment()
 {
   var lastComment = $('.comments .comment:last');
