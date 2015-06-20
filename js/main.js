@@ -1,6 +1,7 @@
 var featuredSwiper,
     featuredAnimationTime = 250,
-    pagination = $('<div class="swiper-pagination"></div>'); // простите
+    pagination = $('<div class="swiper-pagination"></div>'), // простите
+    dropdownMenuSpeedAnimation = 100;
 
 function random(min, max) 
 {
@@ -59,6 +60,16 @@ $(function()
   checkSwiper();
 
   $(window).resize(checkSwiper);
+
+  $('.menu .mobile-container .icon').click(function()
+  {
+    var d = $('.menu .mobile-container .dropdown');
+
+    if (d.is(':visible'))
+      $('.menu .mobile-container .dropdown:visible').slideUp(dropdownMenuSpeedAnimation);
+    else
+      $('.menu .mobile-container .dropdown:hidden').slideDown(dropdownMenuSpeedAnimation);
+  });
 
   $('.featured button').click(function()
   {
