@@ -157,6 +157,7 @@
   /* Обложка */
   .cover
   {
+    position: relative;
     background-position: 50% 25%;
   }
 
@@ -188,8 +189,8 @@
   .cover .share
   {
     display: table;
-    position: relative;
-    top: 243px;
+    position: absolute;
+    bottom: 0;
     width: 448px;
     left: 128px;
     z-index: 15;
